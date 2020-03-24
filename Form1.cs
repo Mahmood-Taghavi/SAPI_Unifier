@@ -15,7 +15,7 @@ namespace SAPI_Unifier
 		public Form_main()
 		{
 			InitializeComponent();
-
+			//MessageBox.Show("Program is Running!"); // to check validity of single instance running. It's work fine :) Thanks https://www.c-sharpcorner.com/UploadFile/f9f215/how-to-restrict-the-application-to-just-one-instance/
 			string SAPI5Path = "SOFTWARE\\Microsoft\\SPEECH\\Voices\\Tokens\\";
 			string MobilePath = "SOFTWARE\\Microsoft\\Speech_OneCore\\Voices\\Tokens\\";
 			string ServerPath = "SOFTWARE\\Microsoft\\Speech Server\\v11.0\\Voices\\Tokens\\";
@@ -47,7 +47,7 @@ namespace SAPI_Unifier
 			}
 			catch
 			{
-				MessageBox.Show("An Error in the preliminary analysis is occurred!", "Error #1");
+				MessageBox.Show("An Error in the preliminary analysis is occurred!", "Error #1", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 
 			foreach (string SAPI5Token in SAPI5Tokens)
@@ -72,7 +72,7 @@ namespace SAPI_Unifier
 				}
 				catch
 				{
-					MessageBox.Show("An Error in removing of " + SAPI5Token + " is occurred!", "Error #2");
+					MessageBox.Show("An Error in removing of " + SAPI5Token + " is occurred!", "Error #2", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 
 				try
@@ -96,7 +96,7 @@ namespace SAPI_Unifier
 				}
 				catch
 				{
-					MessageBox.Show("An Error in removing of " + SAPI5Token + " is occurred!", "Error #3");
+					MessageBox.Show("An Error in removing of " + SAPI5Token + " is occurred!", "Error #3", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
 
@@ -137,7 +137,7 @@ namespace SAPI_Unifier
 				}
 				catch
 				{
-					MessageBox.Show("An Error in adding of " + MobileToken + " is occurred!", "Error #4");
+					MessageBox.Show("An Error in adding of " + MobileToken + " is occurred!", "Error #4", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
 			
@@ -178,7 +178,7 @@ namespace SAPI_Unifier
 				}
 				catch
 				{
-					MessageBox.Show("An Error in adding of " + ServerToken + " is occurred!", "Error #5");
+					MessageBox.Show("An Error in adding of " + ServerToken + " is occurred!", "Error #5", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 
 			}
@@ -200,7 +200,7 @@ namespace SAPI_Unifier
 
 		private void button_about_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("Author: Mahmood Taghavi; Version 1.0; License: GPL 3", "About SAPI Unifier");
+			MessageBox.Show("Author: Mahmood Taghavi; Version 1.0; License: GPL 3", "About SAPI Unifier", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
 		private void linkLabel_website_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
