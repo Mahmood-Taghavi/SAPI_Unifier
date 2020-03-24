@@ -1,0 +1,8 @@
+C:\Users\Motahareh Parsa\source\repos\SAPI_Unifier\bin\Release\SAPI_Unifier.exe
+C:\Users\Motahareh Parsa\source\repos\SAPI_Unifier\bin\Release\SAPI_Unifier.pdb
+C:\Users\Motahareh Parsa\source\repos\SAPI_Unifier\obj\Release\SAPI_Unifier.csprojAssemblyReference.cache
+C:\Users\Motahareh Parsa\source\repos\SAPI_Unifier\obj\Release\SAPI_Unifier.Properties.Resources.resources
+C:\Users\Motahareh Parsa\source\repos\SAPI_Unifier\obj\Release\SAPI_Unifier.csproj.GenerateResource.cache
+C:\Users\Motahareh Parsa\source\repos\SAPI_Unifier\obj\Release\SAPI_Unifier.exe
+C:\Users\Motahareh Parsa\source\repos\SAPI_Unifier\obj\Release\SAPI_Unifier.pdb
+C:\Users\Motahareh Parsa\source\repos\SAPI_Unifier\obj\Release\SAPI_Unifier.Form_main.resources

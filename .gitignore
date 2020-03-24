@@ -1,0 +1,8 @@
+# exclude everything
+bin/Debug/*
+bin/Release/*
+
+
+# exception to the rule
+!bin/Debug/.gitkeep 
+!bin/Release/.gitkeep 
