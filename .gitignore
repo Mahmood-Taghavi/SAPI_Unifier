@@ -1,8 +1,11 @@
 # exclude everything
+obj/Debug/*
+obj/Release/*
 bin/Debug/*
 bin/Release/*
 
-
 # exception to the rule
+!obj/Debug/.gitkeep 
+!obj/Release/.gitkeep
 !bin/Debug/.gitkeep 
 !bin/Release/.gitkeep 
