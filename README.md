@@ -1,6 +1,6 @@
 ## SAPI Unifier
 
-A free software to Unify installed Microsoft OneCore voices and Microsoft Speech Server voices with Microsoft Speech API version 5 (SAPI 5) in Windows.
+Free software to Unify installed Microsoft OneCore voices and Microsoft Speech Server voices with Microsoft Speech API version 5 (SAPI 5) in Windows. Hence, users can employ all of the aforementioned voices as standard SAPI 5 voices in Windows.
 
 You can download the [latest version of the SAPI Unifier from this link](https://github.com/Mahmood-Taghavi/SAPI_Unifier/releases/download/v1.0/SAPI_Unifier.exe) 
 
