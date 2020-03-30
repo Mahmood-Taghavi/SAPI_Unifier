@@ -44,6 +44,8 @@ namespace SAPI_Unifier
 				if (key != null) ServerTokens = key.GetSubKeyNames();
 				key = Registry.LocalMachine.OpenSubKey(CortanaPath);
 				if (key != null) CortanaTokens = key.GetSubKeyNames();
+				//MessageBox.Show(MobileTokens.Length.ToString(),"Number of instaled Mobile Tokens", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				//MessageBox.Show(ServerTokens.Length.ToString(),"Number of instaled Server Tokens", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 			catch
 			{
@@ -183,6 +185,18 @@ namespace SAPI_Unifier
 
 			}
 
+			// if there is no installed Mobile voice (which occurs in all Windows except Windows 10) and no Server voice then I suggest installing some server voices
+			if (MobileTokens.Length == 0 & ServerTokens.Length == 0)
+			{
+				textBox_report.Text = textBox_report.Text + "I could not find any unifiable voice on your system. So, I suggest installing the Microsoft Speech Platform (Speech Server) Runtime version 11 x86 and some of its supported voices." + Environment.NewLine;
+				textBox_report.Text = textBox_report.Text + "The x86 version of Microsoft Speech Platform 11 can be installed on both x86 and x64 versions of Windows XP, Vista, 7, 8, 8.1, and 10." + Environment.NewLine;
+				textBox_report.Text = textBox_report.Text + "See the below link for installing x86_SpeechPlatformRuntime:" + Environment.NewLine;
+				textBox_report.Text = textBox_report.Text + "https://www.microsoft.com/en-us/download/details.aspx?id=27225" + Environment.NewLine;
+				textBox_report.Text = textBox_report.Text + "See the below link for installing some voices which are titled MSSpeech_TTS:" + Environment.NewLine;
+				textBox_report.Text = textBox_report.Text + "https://www.microsoft.com/en-us/download/details.aspx?id=27224" + Environment.NewLine;
+				textBox_report.Text = textBox_report.Text + "Note: for example, MSSpeech_TTS_en-US_Helen.msi and MSSpeech_TTS_en-US_ZiraPro.msi are two installable English (US) voices." + Environment.NewLine;
+			}
+
 		}
 
 		private void Form1_Load(object sender, EventArgs e)
@@ -200,7 +214,7 @@ namespace SAPI_Unifier
 
 		private void button_about_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("Author: Mahmood Taghavi; Version 1.0; License: GPL 3", "About SAPI Unifier", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			MessageBox.Show("Author: Mahmood Taghavi; Version 1.1; License: GPL 3", "About SAPI Unifier", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
 		private void linkLabel_website_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
